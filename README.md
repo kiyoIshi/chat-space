@@ -38,25 +38,13 @@
 |------|----|-------|
 |user_id|references|null: false, foreign_key: true|
 |group_id|references|null: false, foreign_key: true|
-|body|text|null: false|
-|image_id|null: true, foreign_key: true|
+|body|text|null: true|
+|image|image|null: true|
 
 ### Association
 - belongs_to :user
 - belongs_to :group
 - has_many :images
-
-
-## imagesテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|message_id|references|null: false, foreign_key: true|
-|image|image|null: false|
-
-
-### Association
-- belongs_to :message
 
 
 
