@@ -4,7 +4,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|nickname|varchar|null: false|
+|nickname|string|null: false|
 
 ### Association
 - has_many :groups
