@@ -17,7 +17,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|group_name|varchar|null: false|
+|name|string|null: false|
 
 ### Association
 - belongs_to :user
