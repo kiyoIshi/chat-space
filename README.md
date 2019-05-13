@@ -5,8 +5,6 @@
 |Column|Type|Options|
 |------|----|-------|
 |nickname|varchar|null: false|
-|email|varchar|null: false|
-|password|char|null: false| 
 
 ### Association
 - has_many :groups
