@@ -25,8 +25,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
+|group_id|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
@@ -36,8 +36,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
+|group_id|references|null: false, foreign_key: true|
 |body|text|null: false|
 |image_id|null: true, foreign_key: true|
 
@@ -51,7 +51,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|message_id|null: false, foreign_key: true|
+|message_id|references|null: false, foreign_key: true|
 |image|image|null: false|
 
 
