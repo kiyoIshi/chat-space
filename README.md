@@ -4,12 +4,12 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|nickname|string|null: false|
-- add_index : users, [:nickname]
+|nickname|string|null: false|index: true
 
 ### Association
 - has_many :groups, through: :members
 - has_many :messages
+- has_many :members
 
 ## groups テーブル
 
@@ -39,8 +39,8 @@
 |------|----|-------|
 |user_id|references|foreign_key: true|
 |group_id|references|foreign_key: true|
-|body|text|null: true|
-|image|string|null: true|
+|body|text|
+|image|string|
 
 ### Association
 - belongs_to :user
