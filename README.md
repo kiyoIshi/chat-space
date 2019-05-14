@@ -5,6 +5,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |nickname|string|null: false|
+- add_index : users, [:nickname]
 
 ### Association
 - has_many :groups, through: :members
