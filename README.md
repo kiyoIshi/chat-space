@@ -31,7 +31,7 @@
 
 ### Association
 - belongs_to :group
-- has_many :users
+- belongs_to :user
 
 ## messagesテーブル
 
