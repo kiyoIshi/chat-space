@@ -1,0 +1,36 @@
+.flash-box　グループを作成しました
+.wrapper
+  .chat-side
+    .side-header
+      .side-header__user-name test-user
+      %ul.user-menu
+        %li.user-menu__edit-user
+          %i.fa.fa-fw.fa-edit
+        %li.user-menu__new-group
+          %i.fa.fa-fw.fa-cog
+
+    .groups
+      .groups__group  
+        .groups__group__group-name  test-group
+        .groups__group__latest-message さようなら
+  .chat-main
+    .main-header
+      .main-header__current-group
+        .main-header__current-group__name  test-group
+        .main-header__current-group__member-list
+          .main-header__current-group__member-list__member Member: test-user
+      .main-header__edit-btn  Edit
+    .messages 
+      .message
+        .message__upper-info
+          .message__upper-info__user test-user
+          .message__upper-info__date 2019/05/16(Thur)
+        .message__text  こんにちは！
+    .form
+      %form.new-message{action: '/', method: 'post'}
+        .new-message__input-box
+          %input.new-message__input-box__text{type: "text", placeholder: "type a message"}
+          %label.image-label{for: "message-image"}
+            %i.fa.fa-image
+            %input.image-label{type: "file", id: "message-image", style: "display:none;"}
+        %input.submit-btn{:type => "submit", :value => "Send"}
