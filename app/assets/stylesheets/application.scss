@@ -1,10 +1,4 @@
 @import "./reset";
 @import "variable";
-$browser-context: 16; // Default
-
-@function em($pixels, $context: $browser-context) {
-  @return #{$pixels/$context}em;
-}
-
 @import "./index";
 @import "font-awesome";
