@@ -1,3 +1,10 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 .flash-box {
   background-color: $pure_blue;
   color: $base_color;
@@ -10,7 +17,6 @@
 #wrapper {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   height: 100vh;
 }
 
@@ -19,7 +25,6 @@
   color: $base_color;
   float: left;
   margin-bottom: 0;
-  box-sizing: border-box;
   height: 100vh;
   background-color: $sidecolor;
 }
@@ -34,7 +39,6 @@
   width: 100%;
   font-weight: bold;
   margin: 0;
-  box-sizing: border-box;
 
   &__user-name {
     font-size: em(16);
@@ -96,7 +100,6 @@
 .chat-main {
   width: calc(100vw - 300px);
   float: left;
-  box-sizing: border-box;
 }
 
 .main-header {
@@ -176,7 +179,6 @@
   height: 90px;
   padding: 20px 40px;
   background-color: #ddd;
-  box-sizing: border-box;
   display: flex;
   margin: 0;
 
