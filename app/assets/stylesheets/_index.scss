@@ -86,12 +86,12 @@ html {
     color: $base_color;
   
     &__group-name {
-      font-size: em(15);
+      font-size: 15px;
       padding-bottom: 5px;
     }
 
     &__latest-message {
-      font-size: em(11);
+      font-size: 11px;
     }
   }
 }
@@ -117,7 +117,7 @@ html {
       margin-top: 35px;
     
       &__name {
-        font-size: em(20);
+        font-size: 20px;
         font-weight: normal;
       }
       &__member-list {
@@ -159,20 +159,20 @@ html {
 
       &__user {
         color: $greyish;
-        font-size: em(16);
+        font-size: 16px;
         font-weight: bold;
       }
 
       &__date {
         color: #999999;
-        font-size: em(12);
+        font-size: 12px;
         margin-left: 10px;
       }
 
     }
     &__text {
       color: $greyish;
-      font-size: em(14);
+      font-size: 14px;
       margin-bottom: 10px;
     }
   }
