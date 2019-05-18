@@ -21,6 +21,12 @@ html {
   height: 100vh;
 }
 
+.clearfix::after {
+    content : " ";
+    display : block;
+    clear : both;
+}
+
 .chat-side {
   width: 300px;
   color: $base_color;
@@ -149,41 +155,41 @@ html {
   background-color: #fafafa;
   overflow: scroll;
   margin: 0;
-}
 
-.message {
-  padding-bottom: 40px;
+  &__message {
+    padding-bottom: 40px;
 
-  &__upper-info {
-    display: flex;
-    margin-bottom: 10px;
+    &__upper-info {
+      display: flex;
+      margin-bottom: 10px;
 
-    &__user {
+      &__user {
+        color: $greyish;
+        font-size: em(16);
+        font-weight: bold;
+      }
+
+      &__date {
+        color: #999999;
+        font-size: em(12);
+        margin-left: 10px;
+      }
+
+    }
+    &__text {
       color: $greyish;
-      font-size: em(16);
-      font-weight: bold;
+      font-size: em(14);
+      margin-bottom: 10px;
     }
-
-    &__date {
-      color: #999999;
-      font-size: em(12);
-      margin-left: 10px;
-    }
-
-  }
-  &__text {
-    color: $greyish;
-    font-size: em(14);
-    margin-bottom: 10px;
   }
 }
+
 
 .form {
   height: 90px;
   padding: 20px 40px;
   background-color: #ddd;
   display: flex;
-  margin: 0;
 
   .new-message {
     display: flex;

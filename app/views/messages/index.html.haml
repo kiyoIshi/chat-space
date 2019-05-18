@@ -1,5 +1,5 @@
 .flash-box　グループを作成しました
-.wrapper
+.wrapper.clearfix
   .chat-side
     .side-header
       .side-header__user-name test-user
@@ -21,11 +21,11 @@
           .main-header__current-group__member-list__member Member: test-user
       .main-header__edit-btn  Edit
     .messages 
-      .message
-        .message__upper-info
-          .message__upper-info__user test-user
-          .message__upper-info__date 2019/05/16(Thur)
-        .message__text  こんにちは！
+      .messages__message
+        .messages__message__upper-info
+          .messages__message__upper-info__user test-user
+          .messages__message__upper-info__date 2019/05/16(Thur)
+        .messages__message__text  こんにちは！
     .form
       %form.new-message{action: '/', method: 'post'}
         .new-message__input-box
