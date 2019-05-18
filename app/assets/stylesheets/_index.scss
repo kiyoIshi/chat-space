@@ -1,11 +1,3 @@
-$browser-context: 16; // Default
-
-@function em($pixels, $context: $browser-context) {
-  @return #{$pixels/$context}em;
-}
-
-@import "variable";
-
 .flash-box {
   background-color: $pure_blue;
   color: $base_color;
