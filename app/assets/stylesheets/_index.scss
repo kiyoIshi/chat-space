@@ -19,9 +19,9 @@ html {
 }
 
 .clearfix::after {
-    content : " ";
-    display : block;
-    clear : both;
+  content : " ";
+  display : block;
+  clear : both;
 }
 
 .chat-side {
@@ -95,7 +95,6 @@ html {
     }
   }
 }
-
 
 .chat-main {
   width: calc(100% - 300px);
@@ -173,7 +172,6 @@ html {
     }
   }
 }
-
 
 .form {
   height: 90px;
