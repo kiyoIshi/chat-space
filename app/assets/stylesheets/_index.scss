@@ -62,83 +62,70 @@ html {
 }
 
 .messages {
-  height: calc(100vh - 190px);
-  padding: 46px 40px;
-  background-color: #fafafa;
-  overflow: scroll;
-  margin: 0;
-
-  &__message {
-    padding-bottom: 40px;
-    &__upper-info {
+  background-color: #FAFAFA;
+  box-sizing: border-box;
+  padding: 46px 40px 0;
+  height: calc(100% - 100px - 90px);
+  .message {
+    .upper-message {
       display: flex;
-      margin-bottom: 10px;
-     &__user {
-        color: $greyish;
+      &__user-name {
+        color: #434a54;
         font-size: 16px;
         font-weight: bold;
       }
       &__date {
-        color: $light_gray;
+        color: #999;
         font-size: 12px;
-        margin-left: 10px;
+        padding-left: 10px;
       }
     }
-    &__text {
-      color: $black;
-      font-size: 14px;
-      margin-bottom: 10px;
+    .lower-message {
+      margin-top: 10px;
+      &__content {
+        color: #434a54;
+        font-size: 14px;
+        margin-bottom: 40px;
+      }
     }
   }
 }
 
 .form {
+  background-color: #DDDDDD;
+  box-sizing: border-box;
   height: 90px;
-  padding: 20px 40px;
-  background-color: #ddd;
-  display: flex;
-}
-
-.new-message {
-  display: flex;
-  height: 50px;
-  width: 100%;
-
-  &__input-box {
+  padding: 20px 50px 20px 40px;
+  &__message {
+    border: none;
+    float: left;
+    height: 50px;
+    padding-left: 10px;
+    width: calc(100% - 150px);
+  }
+  &__mask {
     background-color: $white;
-    position: relative;
-    width: 100%;
-    color: $black;
-
-    &__text {
-      height: 50px;
-      position: relative;
-      width: 100%;
-      color: $black;
-      border-style: none;
-      padding-left: 10px;
+    float: left;
+    height: 50px;
+    padding-right: 10px;
+    &__image {
+      font-size: 20px;
+      line-height: 50px;
+      cursor: pointer;
+    }
+    .hidden {
+      display: none;
     }
   }
+  &__submit {
+    background-color: $light_blue;
+    border: none;
+    color: $white;
+    float: right;
+    font-size: 16px;
+    height: 50px;
+    margin-left: 15px;
+    padding: 0 30px;
+    cursor: pointer;
+  }
 }
-
-.image-label {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-  content: '\f013';
-  font-family: "FontAwesome 5 Free";
-  font-weight: 900;
-  margin-right: 0;
-}
-
-.submit-btn {
-  width: 100px;
-  height: 50px;
-  padding: 0 30px;
-  margin-left: 15px;
-  background-color: $pure_blue;
-  color: $white;
-  cursor: pointer;
-}
-
