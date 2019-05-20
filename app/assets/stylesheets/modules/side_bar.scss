@@ -33,7 +33,8 @@
     padding: 0 20px;
     .group {
       box-sizing: border-box;
-      padding: 20px 0 40px;
+      padding-top: 20px;
+
       &__name {
         color: $white;
         font-size: $side_group_name;
@@ -42,6 +43,7 @@
         color: $white;
         font-size: $side_group_message;
         margin-top: 5px;
+        padding-bottom: 40px;
       }
     }
   }

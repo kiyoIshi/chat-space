@@ -1,4 +1,4 @@
-.wrapper.clearfix
+.wrapper
   = render 'shared/side_bar'
 
   .chat-main
@@ -11,10 +11,10 @@
     .messages
       = render @messages
     .form
-      %form.new-message{action: '/', method: 'post'}
-        .new-message__input-box
-          %input.new-message__input-box__text{type: "text", placeholder: "type a message"}
-          %label.image-label{for: "message-image"}
-            %i.fa.fa-image
-            %input.image-label{type: "file", id: "message-image", style: "display:none;"}
-        %input.submit-btn{:type => "submit", :value => "Send"}
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
