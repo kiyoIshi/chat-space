@@ -8,12 +8,8 @@
         .main-header__current-group__member-list
           .main-header__current-group__member-list__member Member: test-user
       .main-header__edit-btn  Edit
-    .messages 
-      .messages__message
-        .messages__message__upper-info
-          .messages__message__upper-info__user test-user
-          .messages__message__upper-info__date 2019/05/16(Thur)
-        .messages__message__text  こんにちは！
+   .messages
+      = render @messages
     .form
       %form.new-message{action: '/', method: 'post'}
         .new-message__input-box
