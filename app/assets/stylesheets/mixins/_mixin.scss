@@ -5,11 +5,3 @@
   display: -webkit-flex;
   display: flex;
 }
-
-@mixin clearfix {
-  &:after {
-    content: "";
-    clear: both;
-    display: block;
-  }
-}
