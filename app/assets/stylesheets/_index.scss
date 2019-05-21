@@ -58,6 +58,9 @@ html {
       border: solid 1px $pure_blue;
       color: $pure_blue;
       cursor: pointer;
+      a {
+        color: $pure_blue;
+      }
     }
 }
 

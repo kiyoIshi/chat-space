@@ -3,10 +3,15 @@
   .chat-main
     .main-header
       .main-header__current-group
-        .main-header__current-group__name  test-group
+        .main-header__current-group__name 
+          = @group.name
         .main-header__current-group__member-list
-          .main-header__current-group__member-list__member Member: test-user
-      .main-header__edit-btn  Edit
+          MEMBER：
+          .main-header__current-group__member-list__member
+          - @group.users.each do |user|
+            = user.name
+      .main-header__edit-btn
+        = link_to 'Edit', edit_group_path(@group)
     .messages
       = render @messages
     .form
