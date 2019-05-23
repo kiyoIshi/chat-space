@@ -1,7 +1,18 @@
 class UsersController < ApplicationController
   
+  def index
+  end
+
   def edit
   end
+
+  def search
+    @users = User.where()
+    respond_to do |format|
+      format.html
+      format.json
+  end
+
 
   def update
     if current_user.update(user_params)
