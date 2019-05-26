@@ -1,18 +1,7 @@
 class UsersController < ApplicationController
-  
-  def index
-  end
 
   def edit
   end
-
-  def search
-    @users = User.where()
-    respond_to do |format|
-      format.html
-      format.json
-  end
-
 
   def update
     if current_user.update(user_params)
@@ -21,6 +10,15 @@ class UsersController < ApplicationController
       render :edit
     end
   end
+
+    def index
+      @users = User.where('name LIKE(?)', "%#{params[:name]}%").where.not(id: 
+        current_user.id).limit(20)
+      respond_to do |format|
+        format.html
+        format.json
+      end
+    end
 
   private
 
