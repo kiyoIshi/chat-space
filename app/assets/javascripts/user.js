@@ -59,7 +59,6 @@ $(function() {
     var user_name = $(this).data("user-name");
     var user_id = $(this).data("user-id");
     AddUserName(user_name, user_id);
-    // ここで検索結果からhtmlを消す
     $(this).parent().remove();
   });
 
