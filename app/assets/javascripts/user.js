@@ -1,20 +1,20 @@
 $(function() {
 
-  var search_list = $("#user_search_result");
+  var searchList = $("#user_search_result");
 
   function appendUser(user) {
     var html = `<div class="chat-group-user clearfix">
                     <p class="chat-group-user__name">${user.name}</p>
                     <div class="user-search-add chat-group-user__btn chat-group-user__btn--add" data-user-id="${user.id}" data-user-name="${user.name}">追加</div>
                 </div>`
-    search_list.append(html);
+    searchList.append(html);
   }
 
-  function appendNoUserName(fail_comment) {
+  function appendNoUserName(failComment) {
     var html = `<p>
-                  <div class="chat-group-user__name'>${fail_comment}</div>
+                  <div class="chat-group-user__name'>${failComment}</div>
                 </p>`
-    search_list.append(html); 
+    searchList.append(html); 
   }
 
   $("#user-search-field").on("keyup", function() {
@@ -44,21 +44,21 @@ $(function() {
     }
   });
 
-  var search_list_add = $("#chat-group-users");
+  var searchListAdd = $("#chat-group-users");
 
-  function AddUserName(user_name, user_id) {
+  function addUserName(userName, userId) {
     var html =`<div class='chat-group-user clearfix js-chat-member' id='chat-group-user-8'>
-                  <input name='group[user_ids][]' type='hidden' value='${user_id}'>
-                  <p class='chat-group-user__name'>${user_name}</p>
+                  <input name='group[user_ids][]' type='hidden' value='${userId}'>
+                  <p class='chat-group-user__name'>${userName}</p>
                   <a class='user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn'>削除</a>
                 </div>`
-    search_list_add.append(html);
+    searchListAdd.append(html);
   };
 
   $(document).on("click", ".chat-group-user__btn--add", function () {
-    var user_name = $(this).data("user-name");
-    var user_id = $(this).data("user-id");
-    AddUserName(user_name, user_id);
+    var userName = $(this).data("user-name");
+    var userId = $(this).data("user-id");
+    addUserName(userName, userId);
     $(this).parent().remove();
   });
 
