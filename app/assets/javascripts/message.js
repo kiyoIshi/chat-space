@@ -1,6 +1,5 @@
 $(function(){
   function buildHTML(message){
-    // console.log(message)
     var html_common = `<div class= "message" data-id="${message.id}">
                   <div class= "upper-message">
                     <div class= "upper-message__user-name">
