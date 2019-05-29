@@ -12,14 +12,14 @@ $(function() {
 
   function appendNoUserName(failComment) {
     var html = `<div class="chat-group-user clearfix">
-                  <p class="chat-group-user__name'>${failComment}</p>
+                  <p class="chat-group-user__name">${failComment}</p>
                 </div>`
     searchList.append(html); 
   }
 
   $("#user-search-field").on("keyup", function() {
     var input = $("#user-search-field").val();
-    if(input!==""){
+    if(input !==""){
       $.ajax({
         type: 'GET',
         url: '/users',
