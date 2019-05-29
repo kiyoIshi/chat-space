@@ -11,9 +11,9 @@ $(function() {
   }
 
   function appendNoUserName(failComment) {
-    var html = `<p>
-                  <div class="chat-group-user__name'>${failComment}</div>
-                </p>`
+    var html = `<div class="chat-group-user clearfix">
+                  <p class="chat-group-user__name'>${failComment}</p>
+                </div>`
     searchList.append(html); 
   }
 
