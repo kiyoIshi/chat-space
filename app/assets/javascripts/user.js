@@ -19,6 +19,9 @@ $(function() {
 
   $("#user-search-field").on("keyup", function() {
     var input = $("#user-search-field").val();
+    var addedUserIds = $('.chat-group-user').find('input').map(function(){
+      return $(this).attr('value');
+    });
     if(input !==""){
       $.ajax({
         type: 'GET',
@@ -29,9 +32,19 @@ $(function() {
 
       .done(function(users) {
         $("#user_search_result").empty();
-        if (users.length !== 0) {
+        var searchedUserIds = users.map(function(user){
+          return user.id;
+        });
+        var addedUserIdsNum = addedUserIds.get().map(Number)
+        function compareFunc(a, b) {
+          return a - b;
+        }
+        addedUserIdsNum.sort(compareFunc);
+        if (users.length !== 0 && searchedUserIds.toString() !== addedUserIdsNum.toString()) {
           users.forEach(function(user){
+            if (addedUserIds.get().indexOf(`${user.id}`) == -1){
             appendUser(user);
+            }
           });
         }
         else {
