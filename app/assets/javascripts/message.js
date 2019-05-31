@@ -62,10 +62,10 @@ $(function(){
       dataType: 'json',
     })
 
-    .done(function(messages) {
-      messages.forEach(function(message){
+    .done(function(data) {
+      data.forEach(function(message){
         var insertHTML = buildHTML(message);
-        $('.message').append(insertHTML);
+        $('.messages').append(insertHTML);
         $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
       })
     })
