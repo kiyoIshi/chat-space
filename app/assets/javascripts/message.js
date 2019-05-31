@@ -13,7 +13,7 @@ $(function(){
                     <p class="lower-message__content">
                       ${message.content}
                     </p>`
-    if (message.image === null) {
+    if (message.image.url === null) {
       var html = html_common 
       return html;
     } else {
