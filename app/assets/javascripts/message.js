@@ -62,8 +62,8 @@ $(function(){
       dataType: 'json',
     })
 
-    .done(function(data) {
-      data.forEach(function(message){
+    .done(function(messages) {
+      messages.forEach(function(message){
         var insertHTML = buildHTML(message);
         $('.message').append(insertHTML);
         $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
