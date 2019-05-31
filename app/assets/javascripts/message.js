@@ -13,15 +13,12 @@ $(function(){
                     <p class="lower-message__content">
                       ${message.content}
                     </p>`
-    if (message.image.url === null) {
-      var html = html_common + `</div>
-                  </div>`
+    if (message.image === null) {
+      var html = html_common 
       return html;
     } else {
-      var html = html_common + `<image class="lower-message__image", src= ${message.image}>                 
-                  </div>
-                </div>`
-    return html;
+      var html = html_common + `<image class="lower-message__image", src= ${message.image.url}>`                 
+      return html;
     }
   }
 
